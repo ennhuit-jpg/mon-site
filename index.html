@@ -1,0 +1,2280 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="BioNaturel - Produits bio et naturels de qualité supérieure. Huile d'olive, miel, thé, superaliments et café bio.">
+    <meta name="keywords" content="bio, produits biologiques, naturel, huile d'olive, miel, thé vert, spiruline, café arabica">
+    <meta name="author" content="BioNaturel">
+    <title>BioNaturel - Produits Bio & Naturels Premium</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/@fontsource/inter@5.0.0/400.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@fontsource/inter@5.0.0/500.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@fontsource/inter@5.0.0/600.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@fontsource/inter@5.0.0/700.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@fontsource/playfair-display@5.0.0/400.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@fontsource/playfair-display@5.0.0/500.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@fontsource/playfair-display@5.0.0/600.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@fontsource/playfair-display@5.0.0/700.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        /* ==========================================
+           VARIABLES - THÈME BIO/NATUREL
+           Palette inspirée nature : verts, beiges, terres
+           ========================================== */
+        :root {
+            /* Couleurs principales - Thème Bio */
+            --color-primary: #1a3a0a;        /* Vert foncé profond */
+            --color-primary-light: #2d5016;  /* Vert foncé moyen */
+            --color-secondary: #3d6b24;      /* Vert naturel */
+            --color-accent: #5b9a3b;         /* Vert vif accent */
+            --color-accent-hover: #4a7c2e;   /* Vert accent foncé */
+            --color-accent-light: #7bc44d;   /* Vert clair */
+            --color-gold: #c8a96e;           /* Or/terreux */
+            --color-gold-light: #d4b87a;     /* Or clair */
+            
+            /* Arrière-plans naturels */
+            --color-background: #f5f0e8;     /* Beige crème */
+            --color-background-alt: #faf7f2; /* Blanc cassé */
+            --color-surface: #ffffff;        /* Blanc pur */
+            --color-surface-alt: #f8f5f0;    /* Blanc crème */
+            
+            /* Texte */
+            --color-text: #2c2c2c;           /* Noir doux */
+            --color-text-light: #6b6b6b;     /* Gris moyen */
+            --color-text-muted: #8a8578;     /* Gris-terreux */
+            
+            /* Bordures */
+            --color-border: #d4cfc4;         /* Beige bordure */
+            --color-border-light: #e8e2d8;   /* Beige clair */
+            
+            /* WhatsApp */
+            --color-whatsapp: #25d366;
+            --color-whatsapp-hover: #128c7e;
+
+            /* Typographie */
+            --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            --font-serif: 'Playfair Display', Georgia, 'Times New Roman', serif;
+            
+            /* Espacement */
+            --spacing-xs: 0.5rem;
+            --spacing-sm: 1rem;
+            --spacing-md: 2rem;
+            --spacing-lg: 4rem;
+            --spacing-xl: 6rem;
+            --spacing-2xl: 8rem;
+            
+            /* Rayons */
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 20px;
+            --radius-xl: 30px;
+            --radius-full: 50%;
+            
+            /* Ombres naturelles douces */
+            --shadow-sm: 0 2px 8px rgba(44, 44, 44, 0.06);
+            --shadow-md: 0 4px 16px rgba(44, 44, 44, 0.08);
+            --shadow-lg: 0 8px 32px rgba(44, 44, 44, 0.12);
+            --shadow-xl: 0 12px 48px rgba(44, 44, 44, 0.16);
+            --shadow-green: 0 8px 32px rgba(91, 154, 59, 0.25);
+            
+            /* Transitions */
+            --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* ==========================================
+           RESET ET BASE
+           ========================================== */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            color: var(--color-text);
+            background-color: var(--color-background);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            overflow-x: hidden;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color var(--transition-fast);
+        }
+
+        button {
+            cursor: pointer;
+            border: none;
+            outline: none;
+            font-family: inherit;
+            transition: all var(--transition-normal);
+        }
+
+        ul { list-style: none; }
+
+        /* ==========================================
+           UTILITAIRES
+           ========================================== */
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-md);
+        }
+
+        .section-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--color-accent);
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .section-label::before {
+            content: '';
+            width: 24px;
+            height: 2px;
+            background: var(--color-accent);
+        }
+
+        .section-title {
+            font-family: var(--font-serif);
+            font-size: clamp(2rem, 4.5vw, 3rem);
+            font-weight: 600;
+            line-height: 1.2;
+            color: var(--color-primary);
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .section-subtitle {
+            font-size: clamp(1rem, 2vw, 1.15rem);
+            color: var(--color-text-light);
+            text-align: center;
+            max-width: 550px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.7;
+        }
+
+        /* Animations */
+        .fade-up {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .fade-left {
+            opacity: 0;
+            transform: translateX(-40px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+
+        .fade-left.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .fade-right {
+            opacity: 0;
+            transform: translateX(40px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+
+        .fade-right.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .scale-in {
+            opacity: 0;
+            transform: scale(0.9);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .scale-in.visible {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        /* ==========================================
+           HEADER FIXE
+           ========================================== */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(245, 240, 232, 0.88);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--color-border-light);
+            transition: all var(--transition-normal);
+        }
+
+        .header.scrolled {
+            background: rgba(245, 240, 232, 0.95);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 76px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-primary) 100%);
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.1rem;
+        }
+
+        .logo-text {
+            font-family: var(--font-serif);
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--color-primary);
+            letter-spacing: -0.02em;
+        }
+
+        .logo-text span {
+            color: var(--color-accent);
+        }
+
+        .nav-desktop {
+            display: flex;
+            align-items: center;
+            gap: 2.5rem;
+        }
+
+        .nav-desktop a {
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: var(--color-text-light);
+            padding: 0.5rem 0;
+            position: relative;
+            letter-spacing: 0.01em;
+        }
+
+        .nav-desktop a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--color-accent);
+            transition: width var(--transition-normal);
+            border-radius: 2px;
+        }
+
+        .nav-desktop a:hover {
+            color: var(--color-primary);
+        }
+
+        .nav-desktop a:hover::after {
+            width: 100%;
+        }
+
+        .nav-desktop a.active {
+            color: var(--color-primary);
+        }
+
+        .nav-desktop a.active::after {
+            width: 100%;
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+        }
+
+        .btn-whatsapp-nav {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.65rem 1.4rem;
+            background: var(--color-whatsapp);
+            color: white;
+            border-radius: var(--radius-xl);
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .btn-whatsapp-nav:hover {
+            background: var(--color-whatsapp-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.35);
+        }
+
+        .menu-toggle {
+            display: none;
+            background: none;
+            padding: 0.5rem;
+            font-size: 1.4rem;
+            color: var(--color-primary);
+        }
+
+        /* Navigation mobile */
+        .nav-mobile {
+            position: fixed;
+            top: 76px;
+            left: 0;
+            right: 0;
+            background: var(--color-surface);
+            padding: var(--spacing-md);
+            transform: translateY(-120%);
+            opacity: 0;
+            transition: all var(--transition-normal);
+            box-shadow: var(--shadow-lg);
+            z-index: 999;
+            border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+        }
+
+        .nav-mobile.active {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .nav-mobile a {
+            display: block;
+            padding: 1rem 0;
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--color-text);
+            border-bottom: 1px solid var(--color-border-light);
+        }
+
+        .nav-mobile a:last-child {
+            border-bottom: none;
+        }
+
+        .nav-mobile .btn-whatsapp-mobile {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-top: var(--spacing-sm);
+            padding: 1rem;
+            background: var(--color-whatsapp);
+            color: white;
+            border-radius: var(--radius-md);
+            font-weight: 600;
+            border-bottom: none;
+        }
+
+        /* ==========================================
+         * HERO SECTION
+           ========================================== */
+        .hero {
+            padding-top: 76px;
+            background: linear-gradient(180deg, var(--color-surface) 0%, var(--color-background) 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(91, 154, 59, 0.08) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -10%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(200, 169, 110, 0.08) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .hero-inner {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-lg);
+            align-items: center;
+            padding: var(--spacing-xl) 0;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-content {
+            max-width: 560px;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.55rem 1.2rem;
+            background: linear-gradient(135deg, rgba(91, 154, 59, 0.12) 0%, rgba(45, 80, 22, 0.08) 100%);
+            color: var(--color-primary-light);
+            border-radius: var(--radius-xl);
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: var(--spacing-md);
+            letter-spacing: 0.03em;
+        }
+
+        .hero-badge i {
+            color: var(--color-accent);
+        }
+
+        .hero-title {
+            font-family: var(--font-serif);
+            font-size: clamp(2.5rem, 5.5vw, 4rem);
+            font-weight: 600;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+            color: var(--color-primary);
+            margin-bottom: var(--spacing-md);
+        }
+
+        .hero-title em {
+            font-style: normal;
+            background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-primary-light) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-description {
+            font-size: clamp(1rem, 1.8vw, 1.15rem);
+            color: var(--color-text-light);
+            margin-bottom: var(--spacing-md);
+            line-height: 1.8;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: var(--spacing-sm);
+            flex-wrap: wrap;
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            padding: 1rem 2rem;
+            background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-primary-light) 100%);
+            color: white;
+            border-radius: var(--radius-xl);
+            font-size: 0.95rem;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+            transition: all var(--transition-normal);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-green);
+        }
+
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            padding: 1rem 2rem;
+            background: var(--color-surface);
+            color: var(--color-primary);
+            border: 2px solid var(--color-border);
+            border-radius: var(--radius-xl);
+            font-size: 0.95rem;
+            font-weight: 600;
+            transition: all var(--transition-normal);
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--color-accent);
+            color: var(--color-accent);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: var(--spacing-lg);
+        }
+
+        .hero-stat {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .hero-stat-number {
+            font-family: var(--font-serif);
+            font-size: 1.75rem;
+            font-weight: 600;
+            color: var(--color-primary);
+        }
+
+        .hero-stat-label {
+            font-size: 0.8rem;
+            color: var(--color-text-muted);
+        }
+
+        .hero-image {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-image img {
+            width: 100%;
+            max-width: 580px;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-xl);
+            animation: heroFloat 6s ease-in-out infinite;
+        }
+
+        .hero-image-decoration {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            border-radius: var(--radius-lg);
+            background: linear-gradient(135deg, var(--color-gold-light) 0%, var(--color-gold) 100%);
+            opacity: 0.15;
+        }
+
+        .hero-image-decoration:nth-child(2) {
+            top: -20px;
+            right: -20px;
+            animation: decorFloat 8s ease-in-out infinite reverse;
+        }
+
+        .hero-image-decoration:nth-child(3) {
+            bottom: -30px;
+            left: -30px;
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--color-accent-light) 0%, var(--color-accent) 100%);
+            animation: decorFloat 6s ease-in-out infinite;
+        }
+
+        @keyframes heroFloat {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-15px) rotate(1deg); }
+        }
+
+        @keyframes decorFloat {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-25px) rotate(10deg); }
+        }
+
+        /* ==========================================
+           SECTION BANNIÈRE CERTIFICATIONS
+           ========================================== */
+        .certifications {
+            padding: var(--spacing-md) 0;
+            background: var(--color-surface);
+            border-top: 1px solid var(--color-border-light);
+            border-bottom: 1px solid var(--color-border-light);
+        }
+
+        .certifications-inner {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: var(--spacing-lg);
+            flex-wrap: wrap;
+        }
+
+        .certification-item {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            color: var(--color-text-muted);
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .certification-item i {
+            font-size: 1.25rem;
+            color: var(--color-accent);
+        }
+
+        /* ==========================================
+           SECTION PRODUITS
+           ========================================== */
+        .products {
+            padding: var(--spacing-2xl) 0;
+        }
+
+        .products-header {
+            text-align: center;
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            gap: var(--spacing-md);
+        }
+
+        .product-card {
+            background: var(--color-surface);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            transition: all var(--transition-normal);
+            border: 1px solid var(--color-border-light);
+            position: relative;
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--color-accent);
+        }
+
+        .product-image {
+            position: relative;
+            padding: var(--spacing-md);
+            background: linear-gradient(145deg, var(--color-surface-alt) 0%, var(--color-background-alt) 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 280px;
+            overflow: hidden;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            border-radius: var(--radius-md);
+            transition: transform var(--transition-slow);
+        }
+
+        .product-card:hover .product-image img {
+            transform: scale(1.06);
+        }
+
+        .product-badges {
+            position: absolute;
+            top: var(--spacing-sm);
+            left: var(--spacing-sm);
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+        }
+
+        .product-badge {
+            padding: 0.35rem 0.9rem;
+            border-radius: var(--radius-xl);
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        .badge-new {
+            background: var(--color-accent);
+            color: white;
+        }
+
+        .badge-popular {
+            background: var(--color-gold);
+            color: white;
+        }
+
+        .badge-promo {
+            background: #e74c3c;
+            color: white;
+        }
+
+        .badge-limited {
+            background: var(--color-primary);
+            color: white;
+        }
+
+        .product-organic {
+            position: absolute;
+            top: var(--spacing-sm);
+            right: var(--spacing-sm);
+            width: 40px;
+            height: 40px;
+            background: var(--color-surface);
+            border-radius: var(--radius-full);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-accent);
+            font-size: 1.1rem;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .product-info {
+            padding: 1.5rem;
+        }
+
+        .product-category {
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--color-accent);
+            margin-bottom: 0.4rem;
+        }
+
+        .product-name {
+            font-family: var(--font-serif);
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--color-primary);
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.01em;
+        }
+
+        .product-description {
+            font-size: 0.85rem;
+            color: var(--color-text-light);
+            margin-bottom: var(--spacing-sm);
+            line-height: 1.6;
+        }
+
+        .product-specs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .spec-tag {
+            padding: 0.3rem 0.7rem;
+            background: var(--color-background-alt);
+            border-radius: var(--radius-sm);
+            font-size: 0.72rem;
+            color: var(--color-text-muted);
+            font-weight: 500;
+        }
+
+        .product-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: var(--spacing-sm);
+            border-top: 1px solid var(--color-border-light);
+        }
+
+        .product-price {
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--color-primary);
+        }
+
+        .product-price .unit {
+            font-size: 0.8rem;
+            font-weight: 400;
+            color: var(--color-text-muted);
+            font-family: var(--font-sans);
+        }
+
+        .btn-whatsapp-product {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.7rem 1.3rem;
+            background: var(--color-whatsapp);
+            color: white;
+            border-radius: var(--radius-xl);
+            font-size: 0.82rem;
+            font-weight: 600;
+        }
+
+        .btn-whatsapp-product:hover {
+            background: var(--color-whatsapp-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+        }
+
+        /* ==========================================
+           SECTION AVANTAGES
+           ========================================== */
+        .advantages {
+            padding: var(--spacing-2xl) 0;
+            background: var(--color-surface);
+        }
+
+        .advantages-header {
+            text-align: center;
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .advantages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: var(--spacing-md);
+        }
+
+        .advantage-card {
+            text-align: center;
+            padding: var(--spacing-lg) var(--spacing-md);
+            background: var(--color-background-alt);
+            border-radius: var(--radius-lg);
+            transition: all var(--transition-normal);
+            border: 1px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .advantage-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--color-accent), var(--color-gold));
+            opacity: 0;
+            transition: opacity var(--transition-normal);
+        }
+
+        .advantage-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--color-border-light);
+        }
+
+        .advantage-card:hover::before {
+            opacity: 1;
+        }
+
+        .advantage-icon {
+            width: 64px;
+            height: 64px;
+            margin: 0 auto var(--spacing-md);
+            background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-primary-light) 100%);
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .advantage-title {
+            font-family: var(--font-serif);
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--color-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .advantage-text {
+            font-size: 0.85rem;
+            color: var(--color-text-light);
+            line-height: 1.7;
+        }
+
+        /* ==========================================
+           SECTION À PROPOS
+           ========================================== */
+        .about {
+            padding: var(--spacing-2xl) 0;
+        }
+
+        .about-inner {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-lg);
+            align-items: center;
+        }
+
+        .about-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .about-image img {
+            width: 100%;
+            max-width: 500px;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .about-image-badge {
+            position: absolute;
+            bottom: -20px;
+            right: 20px;
+            background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-primary-light) 100%);
+            color: white;
+            padding: 1.2rem 1.5rem;
+            border-radius: var(--radius-md);
+            text-align: center;
+            box-shadow: var(--shadow-green);
+        }
+
+        .about-image-badge .number {
+            font-family: var(--font-serif);
+            font-size: 2rem;
+            font-weight: 700;
+            display: block;
+        }
+
+        .about-image-badge .label {
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .about-content .section-label {
+            text-align: left;
+        }
+
+        .about-content .section-title {
+            text-align: left;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .about-text {
+            color: var(--color-text-light);
+            margin-bottom: var(--spacing-sm);
+            line-height: 1.8;
+            font-size: 0.95rem;
+        }
+
+        .about-features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-sm);
+            margin-top: var(--spacing-md);
+        }
+
+        .about-feature {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .about-feature-icon {
+            width: 36px;
+            height: 36px;
+            background: var(--color-background-alt);
+            border-radius: var(--radius-sm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-accent);
+            font-size: 0.9rem;
+            flex-shrink: 0;
+        }
+
+        .about-feature span {
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--color-text);
+        }
+
+        .about-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--spacing-sm);
+            margin-top: var(--spacing-md);
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: var(--spacing-sm);
+            background: var(--color-surface);
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--color-border-light);
+        }
+
+        .stat-number {
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--color-accent);
+        }
+
+        .stat-label {
+            font-size: 0.72rem;
+            color: var(--color-text-muted);
+            margin-top: 0.2rem;
+        }
+
+        /* ==========================================
+           SECTION CONTACT
+           ========================================== */
+        .contact {
+            padding: var(--spacing-2xl) 0;
+            background: var(--color-surface);
+        }
+
+        .contact-header {
+            text-align: center;
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-lg);
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-md);
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: var(--spacing-sm);
+        }
+
+        .contact-icon {
+            width: 52px;
+            height: 52px;
+            background: linear-gradient(135deg, rgba(91, 154, 59, 0.1) 0%, rgba(45, 80, 22, 0.05) 100%);
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-accent);
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        .contact-details h4 {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--color-primary);
+            margin-bottom: 0.25rem;
+        }
+
+        .contact-details p,
+        .contact-details a {
+            font-size: 0.85rem;
+            color: var(--color-text-light);
+            line-height: 1.6;
+        }
+
+        .contact-details a:hover {
+            color: var(--color-accent);
+        }
+
+        .contact-map {
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            height: 280px;
+            border: 1px solid var(--color-border-light);
+        }
+
+        .contact-map iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .contact-form {
+            background: var(--color-background-alt);
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--color-border-light);
+        }
+
+        .contact-form h3 {
+            font-family: var(--font-serif);
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--color-primary);
+            margin-bottom: var(--spacing-md);
+        }
+
+        .form-group {
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 500;
+            margin-bottom: 0.4rem;
+            color: var(--color-text);
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem 1rem;
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-md);
+            font-size: 0.875rem;
+            font-family: inherit;
+            transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+            background: var(--color-surface);
+            color: var(--color-text);
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--color-accent);
+            box-shadow: 0 0 0 3px rgba(91, 154, 59, 0.12);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .btn-submit {
+            width: 100%;
+            padding: 1rem;
+            background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-primary-light) 100%);
+            color: white;
+            border-radius: var(--radius-md);
+            font-size: 0.95rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .btn-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-green);
+        }
+
+        /* ==========================================
+           FOOTER
+           ========================================== */
+        .footer {
+            background: var(--color-primary);
+            color: white;
+            padding: var(--spacing-lg) 0 var(--spacing-md);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--color-accent), var(--color-gold), var(--color-accent));
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: var(--spacing-md);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .footer-brand .logo {
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .footer-brand .logo-icon {
+            background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-gold) 100%);
+        }
+
+        .footer-brand .logo-text {
+            color: white;
+        }
+
+        .footer-brand .logo-text span {
+            color: var(--color-gold-light);
+        }
+
+        .footer-brand p {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.6);
+            line-height: 1.7;
+            max-width: 300px;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 0.75rem;
+            margin-top: var(--spacing-sm);
+        }
+
+        .footer-social a {
+            width: 42px;
+            height: 42px;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: var(--radius-sm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.7);
+            transition: all var(--transition-normal);
+        }
+
+        .footer-social a:hover {
+            background: var(--color-accent);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        .footer-col h4 {
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            margin-bottom: var(--spacing-sm);
+            color: var(--color-gold-light);
+        }
+
+        .footer-col a {
+            display: block;
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.5);
+            padding: 0.35rem 0;
+            transition: all var(--transition-fast);
+        }
+
+        .footer-col a:hover {
+            color: white;
+            padding-left: 0.5rem;
+        }
+
+        .footer-bottom {
+            padding-top: var(--spacing-md);
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: var(--spacing-sm);
+        }
+
+        .footer-bottom p {
+            font-size: 0.82rem;
+            color: rgba(255, 255, 255, 0.35);
+        }
+
+        .footer-bottom a {
+            font-size: 0.82rem;
+            color: rgba(255, 255, 255, 0.35);
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .footer-bottom a:hover {
+            color: var(--color-gold-light);
+        }
+
+        /* ==========================================
+           BOUTON WHATSAPP FLOTTANT
+           ========================================== */
+        .whatsapp-float {
+            position: fixed;
+            bottom: var(--spacing-md);
+            right: var(--spacing-md);
+            width: 64px;
+            height: 64px;
+            background: var(--color-whatsapp);
+            border-radius: var(--radius-full);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.8rem;
+            box-shadow: 0 6px 24px rgba(37, 211, 102, 0.45);
+            z-index: 999;
+            transition: all var(--transition-normal);
+            animation: whatsappPulse 2.5s infinite;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.12);
+            box-shadow: 0 10px 32px rgba(37, 211, 102, 0.55);
+        }
+
+        @keyframes whatsappPulse {
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); }
+            50% { box-shadow: 0 0 0 18px rgba(37, 211, 102, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
+
+        /* ==========================================
+           RESPONSIVE DESIGN
+           ========================================== */
+        @media (max-width: 1024px) {
+            .hero-inner {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: var(--spacing-md);
+            }
+
+            .hero-content {
+                order: 2;
+                max-width: 100%;
+            }
+
+            .hero-image {
+                order: 1;
+            }
+
+            .hero-description {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .hero-stats {
+                justify-content: center;
+            }
+
+            .about-inner {
+                grid-template-columns: 1fr;
+            }
+
+            .about-image {
+                order: -1;
+            }
+
+            .about-content .section-label,
+            .about-content .section-title {
+                text-align: center;
+            }
+
+            .about-features {
+                max-width: 500px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-desktop {
+                display: none;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .btn-whatsapp-nav {
+                display: none;
+            }
+
+            .products-grid {
+                grid-template-columns: 1fr;
+                max-width: 450px;
+                margin: 0 auto;
+            }
+
+            .certifications-inner {
+                gap: var(--spacing-md);
+            }
+
+            .certification-item {
+                font-size: 0.75rem;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-buttons {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .hero-buttons a {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .hero-stats {
+                flex-direction: column;
+                gap: var(--spacing-sm);
+            }
+
+            .product-footer {
+                flex-direction: column;
+                gap: var(--spacing-sm);
+                align-items: flex-start;
+            }
+
+            .btn-whatsapp-product {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .about-features {
+                grid-template-columns: 1fr;
+            }
+
+            .about-stats {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Scrollbar personnalisée */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--color-background);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--color-border);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--color-accent);
+        }
+    </style>
+</head>
+<body>
+    <!-- ==========================================
+         HEADER FIXE
+         ========================================== -->
+    <header class="header" id="header">
+        <div class="container header-inner">
+            <a href="#" class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-leaf"></i>
+                </div>
+                <div class="logo-text">Bio<span>Naturel</span></div>
+            </a>
+            
+            <nav class="nav-desktop">
+                <a href="#accueil" class="active">Accueil</a>
+                <a href="#produits">Produits</a>
+                <a href="#avantages">Avantages</a>
+                <a href="#apropos">À propos</a>
+                <a href="#contact">Contact</a>
+            </nav>
+
+            <div class="header-actions">
+                <a href="https://wa.me/33612345678" target="_blank" class="btn-whatsapp-nav">
+                    <i class="fab fa-whatsapp"></i>
+                    WhatsApp
+                </a>
+                <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <nav class="nav-mobile" id="navMobile">
+            <a href="#accueil">Accueil</a>
+            <a href="#produits">Produits</a>
+            <a href="#avantages">Avantages</a>
+            <a href="#apropos">À propos</a>
+            <a href="#contact">Contact</a>
+            <a href="https://wa.me/33612345678" target="_blank" class="btn-whatsapp-mobile">
+                <i class="fab fa-whatsapp"></i>
+                Contacter sur WhatsApp
+            </a>
+        </nav>
+    </header>
+
+    <!-- ==========================================
+         HERO SECTION
+         ========================================== -->
+    <section class="hero" id="accueil">
+        <div class="container">
+            <div class="hero-inner">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <i class="fas fa-seedling"></i>
+                        100% Biologique &amp; Naturel
+                    </div>
+                    <h1 class="hero-title">
+                        Le meilleur de la <em>nature</em> pour votre bien-être
+                    </h1>
+                    <p class="hero-description">
+                        Découvrez notre sélection de produits bio et naturels, cultivés avec passion et respect de la terre. De la ferme à votre table, qualité et authenticité garanties.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#produits" class="btn-primary">
+                            <i class="fas fa-shopping-basket"></i>
+                            Voir nos produits
+                        </a>
+                        <a href="https://wa.me/33612345678" target="_blank" class="btn-secondary">
+                            <i class="fab fa-whatsapp"></i>
+                            Nous contacter
+                        </a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="hero-stat">
+                            <div class="hero-stat-number">500+</div>
+                            <div class="hero-stat-label">Produits bio</div>
+                        </div>
+                        <div class="hero-stat">
+                            <div class="hero-stat-number">5K+</div>
+                            <div class="hero-stat-label">Clients satisfaits</div>
+                        </div>
+                        <div class="hero-stat">
+                            <div class="hero-stat-number">8 ans</div>
+                            <div class="hero-stat-label">D'expérience</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="hero-image-decoration"></div>
+                    <div class="hero-image-decoration"></div>
+                    <img src="https://image.qwenlm.ai/public_source/7d124a9e-6d19-4fdc-afe7-176a4ca90f39/152b919b6-31b6-42c9-817d-0306933b08c2.png" alt="Produits bio et naturels frais" loading="eager">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         BANNIÈRE CERTIFICATIONS
+         ========================================== -->
+    <section class="certifications">
+        <div class="container">
+            <div class="certifications-inner">
+                <div class="certification-item">
+                    <i class="fas fa-certificate"></i>
+                    <span>Certifié Agriculture Biologique</span>
+                </div>
+                <div class="certification-item">
+                    <i class="fas fa-hand-holding-heart"></i>
+                    <span>Commerce Équitable</span>
+                </div>
+                <div class="certification-item">
+                    <i class="fas fa-recycle"></i>
+                    <span>Emballages Recyclables</span>
+                </div>
+                <div class="certification-item">
+                    <i class="fas fa-truck"></i>
+                    <span>Livraison Éco-responsable</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION PRODUITS
+         ========================================== -->
+    <section class="products" id="produits">
+        <div class="container">
+            <div class="products-header">
+                <div class="section-label">Notre sélection</div>
+                <h2 class="section-title">Produits Bio d'Exception</h2>
+                <p class="section-subtitle">Chaque produit est soigneusement sélectionné pour sa qualité exceptionnelle et son authenticité</p>
+            </div>
+            
+            <div class="products-grid">
+                <!-- Produit 1: Huile d'olive -->
+                <article class="product-card fade-up">
+                    <div class="product-image">
+                        <div class="product-badges">
+                            <span class="product-badge badge-new">Nouveau</span>
+                        </div>
+                        <div class="product-organic">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <img src="https://image.qwenlm.ai/public_source/7d124a9e-6d19-4fdc-afe7-176a4ca90f39/10b3ad182-efe8-4b79-90e0-0d9a29ae3d33.png" alt="Huile d'olive bio extra vierge" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Huiles &amp; Vinaigres</div>
+                        <h3 class="product-name">Huile d'Olive Extra Vierge</h3>
+                        <p class="product-description">Huile d'olive bio extra vierge, première pression à froid. Origine Provence, France.</p>
+                        <div class="product-specs">
+                            <span class="spec-tag">500ml</span>
+                            <span class="spec-tag">Pression à froid</span>
+                            <span class="spec-tag">Bio AB</span>
+                            <span class="spec-tag">France</span>
+                        </div>
+                        <div class="product-footer">
+                            <div class="product-price">
+                                18,90 € <span class="unit">/bouteille</span>
+                            </div>
+                            <a href="https://wa.me/33612345678?text=Bonjour, je suis intéressé par l'Huile d'Olive Extra Vierge Bio" target="_blank" class="btn-whatsapp-product">
+                                <i class="fab fa-whatsapp"></i>
+                                Commander
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Produit 2: Miel -->
+                <article class="product-card fade-up">
+                    <div class="product-image">
+                        <div class="product-badges">
+                            <span class="product-badge badge-popular">Populaire</span>
+                        </div>
+                        <div class="product-organic">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <img src="https://image.qwenlm.ai/public_source/7d124a9e-6d19-4fdc-afe7-176a4ca90f39/1b23df902-91d8-4f32-bb10-45ace5eea7e8.png" alt="Miel de montagne bio" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Miels &amp; Sucrants</div>
+                        <h3 class="product-name">Miel de Montagne Bio</h3>
+                        <p class="product-description">Miel artisanal de montagne, récolté dans les alpages français. Saveur florale unique.</p>
+                        <div class="product-specs">
+                            <span class="spec-tag">350g</span>
+                            <span class="spec-tag">Artisanal</span>
+                            <span class="spec-tag">Bio AB</span>
+                            <span class="spec-tag">Alpes</span>
+                        </div>
+                        <div class="product-footer">
+                            <div class="product-price">
+                                14,50 € <span class="unit">/pot</span>
+                            </div>
+                            <a href="https://wa.me/33612345678?text=Bonjour, je suis intéressé par le Miel de Montagne Bio" target="_blank" class="btn-whatsapp-product">
+                                <i class="fab fa-whatsapp"></i>
+                                Commander
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Produit 3: Thé vert -->
+                <article class="product-card fade-up">
+                    <div class="product-image">
+                        <div class="product-badges">
+                            <span class="product-badge badge-promo">-15%</span>
+                        </div>
+                        <div class="product-organic">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <img src="https://image.qwenlm.ai/public_source/7d124a9e-6d19-4fdc-afe7-176a4ca90f39/105200327-a952-4f25-8e07-9d28e634b60d.png" alt="Thé vert bio premium" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Thés &amp; Infusions</div>
+                        <h3 class="product-name">Thé Vert Premium Bio</h3>
+                        <p class="product-description">Thé vert bio de haute qualité, feuilles entières sélectionnées. Riche en antioxydants.</p>
+                        <div class="product-specs">
+                            <span class="spec-tag">100g</span>
+                            <span class="spec-tag">Feuilles entières</span>
+                            <span class="spec-tag">Bio AB</span>
+                            <span class="spec-tag">Japon</span>
+                        </div>
+                        <div class="product-footer">
+                            <div class="product-price">
+                                12,90 € <span class="unit">/100g</span>
+                            </div>
+                            <a href="https://wa.me/33612345678?text=Bonjour, je suis intéressé par le Thé Vert Premium Bio" target="_blank" class="btn-whatsapp-product">
+                                <i class="fab fa-whatsapp"></i>
+                                Commander
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Produit 4: Quinoa -->
+                <article class="product-card fade-up">
+                    <div class="product-image">
+                        <div class="product-badges">
+                            <span class="product-badge badge-new">Nouveau</span>
+                        </div>
+                        <div class="product-organic">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <img src="https://image.qwenlm.ai/public_source/7d124a9e-6d19-4fdc-afe7-176a4ca90f39/136bc9427-db38-48f2-a612-b1cffa55a9c7.png" alt="Quinoa bio équitable" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Super-aliments</div>
+                        <h3 class="product-name">Quinoa Royal Bio</h3>
+                        <p class="product-description">Quinoa royal du Pérou, cultivé en altitude. Source complète de protéines végétales.</p>
+                        <div class="product-specs">
+                            <span class="spec-tag">500g</span>
+                            <span class="spec-tag">Équitable</span>
+                            <span class="spec-tag">Bio AB</span>
+                            <span class="spec-tag">Pérou</span>
+                        </div>
+                        <div class="product-footer">
+                            <div class="product-price">
+                                9,90 € <span class="unit">/500g</span>
+                            </div>
+                            <a href="https://wa.me/33612345678?text=Bonjour, je suis intéressé par le Quinoa Royal Bio" target="_blank" class="btn-whatsapp-product">
+                                <i class="fab fa-whatsapp"></i>
+                                Commander
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Produit 5: Spiruline -->
+                <article class="product-card fade-up">
+                    <div class="product-image">
+                        <div class="product-badges">
+                            <span class="product-badge badge-limited">Édition limitée</span>
+                        </div>
+                        <div class="product-organic">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <img src="https://image.qwenlm.ai/public_source/7d124a9e-6d19-4fdc-afe7-176a4ca90f39/199584346-b8d7-4376-b800-a007dabf26f1.png" alt="Spiruline bio en poudre" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Super-aliments</div>
+                        <h3 class="product-name">Spiruline Bio Premium</h3>
+                        <p class="product-description">Spiruline bio en poudre, cultivée en France. Super-aliment riche en fer et protéines.</p>
+                        <div class="product-specs">
+                            <span class="spec-tag">200g</span>
+                            <span class="spec-tag">Poudre fine</span>
+                            <span class="spec-tag">Bio AB</span>
+                            <span class="spec-tag">France</span>
+                        </div>
+                        <div class="product-footer">
+                            <div class="product-price">
+                                24,90 € <span class="unit">/200g</span>
+                            </div>
+                            <a href="https://wa.me/33612345678?text=Bonjour, je suis intéressé par la Spiruline Bio Premium" target="_blank" class="btn-whatsapp-product">
+                                <i class="fab fa-whatsapp"></i>
+                                Commander
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Produit 6: Café -->
+                <article class="product-card fade-up">
+                    <div class="product-image">
+                        <div class="product-badges">
+                            <span class="product-badge badge-popular">Best-seller</span>
+                        </div>
+                        <div class="product-organic">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <img src="https://image.qwenlm.ai/public_source/7d124a9e-6d19-4fdc-afe7-176a4ca90f39/18b1be20a-bfc6-402d-8ef3-d2381194641d.png" alt="Café Arabica bio" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Cafés &amp; Chocolats</div>
+                        <h3 class="product-name">Café Arabica Bio</h3>
+                        <p class="product-description">Grains de café Arabica bio torréfiés artisanalement. Notes fruitées et chocolatées.</p>
+                        <div class="product-specs">
+                            <span class="spec-tag">250g</span>
+                            <span class="spec-tag">Grains entiers</span>
+                            <span class="spec-tag">Bio AB</span>
+                            <span class="spec-tag">Éthiopie</span>
+                        </div>
+                        <div class="product-footer">
+                            <div class="product-price">
+                                11,90 € <span class="unit">/250g</span>
+                            </div>
+                            <a href="https://wa.me/33612345678?text=Bonjour, je suis intéressé par le Café Arabica Bio" target="_blank" class="btn-whatsapp-product">
+                                <i class="fab fa-whatsapp"></i>
+                                Commander
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION AVANTAGES
+         ========================================== -->
+    <section class="advantages" id="avantages">
+        <div class="container">
+            <div class="advantages-header">
+                <div class="section-label">Nos engagements</div>
+                <h2 class="section-title">Pourquoi choisir BioNaturel ?</h2>
+                <p class="section-subtitle">Nous nous engageons à vous offrir des produits bio authentiques avec un service irréprochable</p>
+            </div>
+            
+            <div class="advantages-grid">
+                <div class="advantage-card fade-up">
+                    <div class="advantage-icon">
+                        <i class="fas fa-truck-fast"></i>
+                    </div>
+                    <h3 class="advantage-title">Livraison Éco-Responsable</h3>
+                    <p class="advantage-text">Livraison en 24-48h avec des emballages recyclables et biodégradables. Livraison offerte dès 49€.</p>
+                </div>
+                
+                <div class="advantage-card fade-up">
+                    <div class="advantage-icon">
+                        <i class="fas fa-shield-halved"></i>
+                    </div>
+                    <h3 class="advantage-title">Qualité Certifiée Bio</h3>
+                    <p class="advantage-text">Tous nos produits sont certifiés Agriculture Biologique AB. Traçabilité complète garantie.</p>
+                </div>
+                
+                <div class="advantage-card fade-up">
+                    <div class="advantage-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3 class="advantage-title">Conseil Personnalisé</h3>
+                    <p class="advantage-text">Notre équipe d'experts en nutrition bio est disponible pour vous guider dans vos choix.</p>
+                </div>
+                
+                <div class="advantage-card fade-up">
+                    <div class="advantage-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3 class="advantage-title">Commerce Équitable</h3>
+                    <p class="advantage-text">Nous travaillons directement avec les producteurs pour garantir des prix justes et équitables.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION À PROPOS
+         ========================================== -->
+    <section class="about" id="apropos">
+        <div class="container">
+            <div class="about-inner">
+                <div class="about-image fade-left">
+                    <img src="https://image.qwenlm.ai/public_source/7d124a9e-6d19-4fdc-afe7-176a4ca90f39/107a8618d-a7b4-4ec3-9783-b45a6bf79692.png" alt="Notre boutique bio" loading="lazy">
+                    <div class="about-image-badge">
+                        <span class="number">8+</span>
+                        <span class="label">Années d'expérience</span>
+                    </div>
+                </div>
+                <div class="about-content fade-right">
+                    <div class="section-label">Notre histoire</div>
+                    <h2 class="section-title">La passion du bio depuis 2018</h2>
+                    <p class="about-text">
+                        BioNaturel est née d'une passion pour l'alimentation saine et le respect de l'environnement. Fondée en 2018 par des passionnés de nature, notre boutique propose une sélection rigoureuse de produits bio et naturels.
+                    </p>
+                    <p class="about-text">
+                        Nous travaillons en direct avec des producteurs engagés, privilégiant les circuits courts et le commerce équitable. Chaque produit est choisi pour sa qualité exceptionnelle et son impact positif sur notre planète.
+                    </p>
+                    
+                    <div class="about-features">
+                        <div class="about-feature">
+                            <div class="about-feature-icon">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <span>Produits 100% certifiés bio</span>
+                        </div>
+                        <div class="about-feature">
+                            <div class="about-feature-icon">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <span>Circuits courts privilégiés</span>
+                        </div>
+                        <div class="about-feature">
+                            <div class="about-feature-icon">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <span>Emballages recyclables</span>
+                        </div>
+                        <div class="about-feature">
+                            <div class="about-feature-icon">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <span>Producteurs partenaires</span>
+                        </div>
+                    </div>
+
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">500+</div>
+                            <div class="stat-label">Produits bio</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">5K+</div>
+                            <div class="stat-label">Clients satisfaits</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">50+</div>
+                            <div class="stat-label">Producteurs</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION CONTACT
+         ========================================== -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-header">
+                <div class="section-label">Contact</div>
+                <h2 class="section-title">Parlons ensemble</h2>
+                <p class="section-subtitle">Une question sur nos produits ? N'hésitez pas à nous contacter, notre équipe vous répondra avec plaisir</p>
+            </div>
+            
+            <div class="contact-grid">
+                <div class="contact-info fade-left">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Téléphone</h4>
+                            <a href="tel:+33612345678">+33 6 12 34 56 78</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <a href="mailto:contact@bionaturel.fr">contact@bionaturel.fr</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-location-dot"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Adresse</h4>
+                            <p>45 Rue de la Nature<br>75011 Paris, France</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.9916256937595!2d2.3762826!3d48.8583701!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e2964e34e2d%3A0x8ddca9ee380ef7e0!2sParis!5e0!3m2!1sfr!2sfr!4v1614234567890!5m2!1sfr!2sfr" allowfullscreen="" loading="lazy" title="Localisation BioNaturel"></iframe>
+                    </div>
+                </div>
+                
+                <div class="contact-form fade-right">
+                    <h3>Envoyez-nous un message</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Nom complet *</label>
+                            <input type="text" id="name" name="name" required placeholder="Votre nom et prénom">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required placeholder="votre@email.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Téléphone</label>
+                            <input type="tel" id="phone" name="phone" placeholder="+33 6 XX XX XX XX">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" required placeholder="Votre message..."></textarea>
+                        </div>
+                        <button type="submit" class="btn-submit">
+                            <i class="fas fa-paper-plane"></i> Envoyer le message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         FOOTER
+         ========================================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <div class="logo-icon">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <div class="logo-text">Bio<span>Naturel</span></div>
+                    </a>
+                    <p>Votre boutique en ligne de produits bio et naturels de qualité. Depuis 2018, nous sélectionnons le meilleur de la nature pour votre bien-être.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="https://wa.me/33612345678" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Navigation</h4>
+                    <a href="#accueil">Accueil</a>
+                    <a href="#produits">Produits</a>
+                    <a href="#avantages">Avantages</a>
+                    <a href="#apropos">À propos</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Nos Produits</h4>
+                    <a href="#produits">Huiles &amp; Vinaigres</a>
+                    <a href="#produits">Miels &amp; Sucrants</a>
+                    <a href="#produits">Thés &amp; Infusions</a>
+                    <a href="#produits">Super-aliments</a>
+                    <a href="#produits">Cafés &amp; Chocolats</a>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Informations</h4>
+                    <a href="#">FAQ</a>
+                    <a href="#">Livraison</a>
+                    <a href="#">Retours</a>
+                    <a href="#">Certifications</a>
+                    <a href="#">Mentions légales</a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 BioNaturel. Tous droits réservés.</p>
+                <a href="https://wa.me/33612345678" target="_blank">
+                    <i class="fab fa-whatsapp"></i> Nous contacter sur WhatsApp
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==========================================
+         BOUTON WHATSAPP FLOTTANT
+         ========================================== -->
+    <a href="https://wa.me/33612345678" target="_blank" class="whatsapp-float" aria-label="Contacter sur WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- ==========================================
+         JAVASCRIPT
+         ========================================== -->
+    <script>
+        // ==========================================
+        // MENU MOBILE HAMBURGER
+        // ==========================================
+        const menuToggle = document.getElementById('menuToggle');
+        const navMobile = document.getElementById('navMobile');
+        const menuIcon = menuToggle.querySelector('i');
+
+        menuToggle.addEventListener('click', () => {
+            const isActive = navMobile.classList.toggle('active');
+            menuIcon.className = isActive ? 'fas fa-xmark' : 'fas fa-bars';
+        });
+
+        // Fermer le menu mobile lors du clic sur un lien
+        document.querySelectorAll('.nav-mobile a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMobile.classList.remove('active');
+                menuIcon.className = 'fas fa-bars';
+            });
+        });
+
+        // ==========================================
+        // HEADER SCROLL EFFECT
+        // ==========================================
+        const header = document.getElementById('header');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // ==========================================
+        // ANIMATIONS AU SCROLL (Intersection Observer)
+        // ==========================================
+        const animatedElements = document.querySelectorAll('.fade-up, .fade-left, .fade-right, .scale-in');
+
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px 0px -60px 0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    // Ajouter un délai progressif pour les éléments frères
+                    const siblings = entry.target.parentElement.querySelectorAll('.fade-up, .fade-left, .fade-right, .scale-in');
+                    const siblingIndex = Array.from(siblings).indexOf(entry.target);
+                    
+                    setTimeout(() => {
+                        entry.target.classList.add('visible');
+                    }, siblingIndex * 100);
+                    
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        animatedElements.forEach(el => observer.observe(el));
+
+        // ==========================================
+        // LAZY LOADING DES IMAGES
+        // ==========================================
+        // Utilisation du lazy loading natif HTML (loading="lazy")
+        // Fallback pour anciens navigateurs
+        if (!('loading' in HTMLImageElement.prototype)) {
+            const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+            const imageObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        if (img.dataset.src) {
+                            img.src = img.dataset.src;
+                        }
+                        imageObserver.unobserve(img);
+                    }
+                });
+            });
+            lazyImages.forEach(img => imageObserver.observe(img));
+        }
+
+        // ==========================================
+        // FORMULAIRE DE CONTACT
+        // ==========================================
+        const contactForm = document.getElementById('contactForm');
+
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const formData = new FormData(contactForm);
+            const name = formData.get('name');
+            const email = formData.get('email');
+            const phone = formData.get('phone');
+            const message = formData.get('message');
+            
+            // Créer un message WhatsApp pré-rempli
+            const whatsappMessage = `Bonjour, je suis ${name}.%0A%0AEmail: ${email}%0ATéléphone: ${phone}%0A%0AMessage:%0A${message}`;
+            const whatsappUrl = `https://wa.me/33612345678?text=${whatsappMessage}`;
+            
+            window.open(whatsappUrl, '_blank');
+            contactForm.reset();
+        });
+
+        // ==========================================
+        // SMOOTH SCROLL POUR LES LIENS INTERNES
+        // ==========================================
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                e.preventDefault();
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    const headerHeight = header.offsetHeight;
+                    const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // ==========================================
+        // NAVIGATION ACTIVE AU SCROLL
+        // ==========================================
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('.nav-desktop a');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            const scrollPosition = window.pageYOffset + 150;
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.offsetHeight;
+                
+                if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // ==========================================
+        // EFFET PARALLAXE LÉGER SUR LE HERO
+        // ==========================================
+        window.addEventListener('scroll', () => {
+            const heroImage = document.querySelector('.hero-image img');
+            if (heroImage && window.pageYOffset < window.innerHeight) {
+                const scrollValue = window.pageYOffset * 0.15;
+                heroImage.style.transform = `translateY(${scrollValue}px)`;
+            }
+        });
+    </script>
+</body>
+</html>
+
